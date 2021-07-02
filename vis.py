@@ -98,6 +98,7 @@ actuation_data = np.array([[27, -1, 1.],
          
 '''
 
+'''
 path = 'test2/'
 actuation_data = np.array([[21, -3, 1], 
                            [25, -6, 4.], 
@@ -111,7 +112,17 @@ actuation_data = np.array([[21, -3, 1],
                            [22, -4, 1.],
                            [20, -5, 0]])
 
+'''
 
+                           
+
+path = 'test3/'
+actuation_data = np.array([[18, -20, 4], 
+                           [24, -10, -1.], 
+                           [22, -5, 0.],
+                           [21, -4, 1.],
+                           [20, -3, 0.],
+                           [19, 14, 1.]])
 
 results_path = os.path.join('images/', path, 'results/')
 

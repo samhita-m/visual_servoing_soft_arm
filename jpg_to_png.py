@@ -11,10 +11,10 @@ import os
 from PIL import Image
 from skimage import img_as_float
 
-img1_path = '/home/samhita/visual_servoing_soft_arm/images/test2/test214.jpg'
+img1_path = '/home/samhita/visual_servoing_soft_arm/images/test3/test36.jpg'
 
 background = Image.open( img1_path)
 
 
 
-background.save('/home/samhita/visual_servoing_soft_arm/images/test2/test214.png',"PNG")
+background.save('/home/samhita/visual_servoing_soft_arm/images/test3/test36.png',"PNG")
