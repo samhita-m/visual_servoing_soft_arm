@@ -112,9 +112,7 @@ actuation_data = np.array([[21, -3, 1],
                            [22, -4, 1.],
                            [20, -5, 0]])
 
-'''
-
-                           
+'''                        
 
 path = 'test3/'
 actuation_data = np.array([[18, -20, 4], 
@@ -130,29 +128,22 @@ if not os.path.exists(results_path):
     os.makedirs(results_path)
     
 
-
-
 images_path = os.path.join('images/', path)
 images = [os.path.join(images_path, file) for file in os.listdir(images_path) if file.endswith('.png')]
 
-images.sort() #good initial sort but doesnt sort numerically very well
+images.sort() 
 sorted(images)
-
 
 img_ini = images[1]
 img_fin = images[-1]
 img_tar = images[0]
 
-
 num_iterations = actuation_data.shape[0]
-
 iterations = [x for x in range(num_iterations)]
- 
  
 plot_actuation(iterations, actuation_data, results_path)
 
 plot_superimposition(img_fin, img_tar, results_path)
-
 
 plot_mse_error(images[1:], img_tar, results_path)
 
