@@ -63,11 +63,8 @@ def plot_mse_error(current_images_path, final_image_path, results_path):
     img_final = Image.open(final_image_path)
     for x in current_images_path:
         
-        
         img1 = Image.open(x)
-        
-        print(x)
-        
+                
         mse = mean_squared_error(img_as_float(img1), img_as_float(img_final))
         
         mse_list.append(mse)
@@ -91,7 +88,7 @@ def plot_mse_error(current_images_path, final_image_path, results_path):
         
     
 
-
+'''
 path = 'test1/'
 actuation_data = np.array([[27, -1, 1.],
                            [21, 3, 3], 
@@ -114,7 +111,7 @@ actuation_data = np.array([[21, -3, 1],
                            [22, -4, 1.],
                            [20, -5, 0]])
 
-'''
+
 
 results_path = os.path.join('images/', path, 'results/')
 
