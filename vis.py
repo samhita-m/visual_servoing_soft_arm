@@ -61,12 +61,12 @@ def plot_mse_error(current_images_path, final_image_path, results_path):
 
     mse_list = []
     img_final = Image.open(final_image_path)
-    for i in range(len(current_images_path)):
+    for x in current_images_path:
         
         
-        img1 = Image.open(current_images_path[len(current_images_path) - 1 - i])
+        img1 = Image.open(x)
         
-        print(current_images_path[len(current_images_path) - 1 - i])
+        print(x)
         
         mse = compare_mse(img_as_float(img1), img_as_float(img_final))
         
@@ -116,10 +116,13 @@ actuation_data = np.array([[21, -3, 1],
 images_path = os.path.join('images/', path)
 images = [os.path.join(images_path, file) for file in os.listdir(images_path) if file.endswith('.png')]
 
+images.sort() #good initial sort but doesnt sort numerically very well
+sorted(images)
 
-img_ini = images[-2]
-img_fin = images[0]
-img_tar = images[-1]
+
+img_ini = images[1]
+img_fin = images[-1]
+img_tar = images[0]
 
 
 num_iterations = actuation_data.shape[0]
@@ -132,6 +135,6 @@ plot_actuation(iterations, actuation_data, results_path)
 plot_superimposition(img_fin, img_tar, results_path)
 
 
-plot_mse_error(images[:-1], img_tar, results_path)
+plot_mse_error(images[1:], img_tar, results_path)
 
 
