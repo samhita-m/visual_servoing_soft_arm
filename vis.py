@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from skimage import img_as_float
 
-from skimage.measure import compare_mse
+from skimage.metrics import mean_squared_error
 
 def plot_actuation(iterations, actuation_data, results_path):
     
@@ -68,16 +68,20 @@ def plot_mse_error(current_images_path, final_image_path, results_path):
         
         print(x)
         
-        mse = compare_mse(img_as_float(img1), img_as_float(img_final))
+        mse = mean_squared_error(img_as_float(img1), img_as_float(img_final))
         
         mse_list.append(mse)
         
     
-    fig, ax = plt.subplots(1, 1, figsize=(10, 5)) 
+    fig, ax = plt.subplots(1, 1, figsize=(5, 5)) 
     
     plt.plot(iterations, mse_list)
     
     ax.grid()
+    ax.set_xticks(iterations)
+    
+    ax.grid(which="major", alpha=0.6)
+    
     ax.set_xlabel('Iteration')
     ax.set_ylabel('MSE')
     ax.set_title('MSE vs Iteration')  
@@ -88,18 +92,16 @@ def plot_mse_error(current_images_path, final_image_path, results_path):
     
 
 
-
-
-
-
 path = 'test1/'
+actuation_data = np.array([[27, -1, 1.],
+                           [21, 3, 3], 
+                           [22, -5, 0],
+                           [20, -3, 1]])
 
-results_path = os.path.join('images/', path, 'results/')
+         
+'''
 
-if not os.path.exists(results_path):
-    os.makedirs(results_path)
-    
-
+path = 'test2/'
 actuation_data = np.array([[21, -3, 1], 
                            [25, -6, 4.], 
                            [21, -3, -1.], 
@@ -111,6 +113,15 @@ actuation_data = np.array([[21, -3, 1],
                            [20,-3,0.],
                            [22, -4, 1.],
                            [20, -5, 0]])
+
+'''
+
+results_path = os.path.join('images/', path, 'results/')
+
+if not os.path.exists(results_path):
+    os.makedirs(results_path)
+    
+
 
 
 images_path = os.path.join('images/', path)
