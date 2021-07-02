@@ -239,7 +239,7 @@ fig1, ax1 = plt.subplots(1, 2, figsize=(10, 20))
 
 img_act = Image.open(os.path.join('images/', path, 'results/actuation_curve.png'))
 
-img_mse = Image.open(os.path.join('images/', path, 'results/msecurve.png'))
+img_mse = Image.open(os.path.join('images/', path, 'results/mse_curve.png'))
 
 ax1[0].imshow(img_act)
 ax1[0].axis('off')
