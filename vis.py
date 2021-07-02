@@ -36,7 +36,7 @@ def plot_actuation(iterations, actuation_data, results_path):
     plt.tight_layout()
     plt.legend(legends)
     
-    plt.savefig(os.path.join(results_path, 'actuation_curve.png'))
+    plt.savefig(os.path.join(results_path, 'actuation_curve.png'), dpi=200)
     
     
     
@@ -87,21 +87,21 @@ def plot_mse_error(current_images_path, target_image_path, results_path):
     ax.set_title('MSE vs Iteration')  
     plt.tight_layout()
     
-    plt.savefig(os.path.join(results_path, 'msecurve.png'))
+    plt.savefig(os.path.join(results_path, 'mse_curve.png'), dpi=200)
         
     
 
-
+'''
 path = 'test1/'
 actuation_data = np.array([[27, -1, 1.],
                            [21, 3, 3], 
                            [22, -5, 0],
                            [20, -3, 1]])
 
-         
-
+'''       
 
 '''
+
 path = 'test2/'
 actuation_data = np.array([[21, -3, 1], 
                            [25, -6, 4.], 
@@ -115,7 +115,7 @@ actuation_data = np.array([[21, -3, 1],
                            [22, -4, 1.],
                            [20, -5, 0]])
 
-'''    
+   
            
 '''
 path = 'test3/'
@@ -126,7 +126,7 @@ actuation_data = np.array([[18, -20, 4],
                            [20, -3, 0.],
                            [19, 14, 1.]])
 
-'''
+
 
 results_path = os.path.join('images/', path, 'results/')
 
@@ -233,7 +233,7 @@ ax[3].tick_params(
 ax[3].set_xlabel('Superimposition Image')
 
 plt.tight_layout()
-plt.savefig(os.path.join(results_path, 'images_only.png'), bbox_inches='tight')
+plt.savefig(os.path.join(results_path, 'images_only.png'), bbox_inches='tight', dpi=200)
 
 fig1, ax1 = plt.subplots(1, 2, figsize=(10, 20)) 
 
@@ -248,7 +248,7 @@ ax1[1].axis('off')
 
 
 plt.tight_layout()
-plt.savefig(os.path.join(results_path, 'iteration_trend.png'), bbox_inches='tight')
+plt.savefig(os.path.join(results_path, 'iteration_trend.png'), bbox_inches='tight', dpi=200)
 
 
 fig2, ax2 = plt.subplots(2, 1, figsize=(20, 15)) 
@@ -264,7 +264,7 @@ ax2[1].axis('off')
 
 
 plt.tight_layout()
-plt.savefig(os.path.join(results_path, 'all_plots.png'), bbox_inches='tight')
+plt.savefig(os.path.join(results_path, 'all_plots.png'), bbox_inches='tight', dpi=200)
 
 
 
