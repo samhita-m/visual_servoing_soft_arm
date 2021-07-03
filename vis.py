@@ -27,8 +27,8 @@ def plot_actuation(iterations, actuation_data, results_path):
         legends_use.append(legends[i])
     
     ax.grid()
-    ax.set_xticks(iterations, minor=True)
-    ax.grid(which="minor",alpha=0.3)
+    ax.set_xticks(iterations)
+    
 
     ax.set_xlabel('Iteration')
     ax.set_ylabel('Actuation')
@@ -90,6 +90,8 @@ def plot_mse_error(current_images_path, target_image_path, results_path):
     plt.savefig(os.path.join(results_path, 'mse_curve.png'), dpi=200)
         
     
+actuation_tar = np.array([[22, -4, 0]])
+
 
 '''
 path = 'test1/'
@@ -115,9 +117,9 @@ actuation_data = np.array([[21, -3, 1],
                            [22, -4, 1.],
                            [20, -5, 0]])
 
-   
-           
-'''
+
+
+'''   
 path = 'test3/'
 actuation_data = np.array([[18, -20, 4], 
                            [24, -10, -1.], 
@@ -126,6 +128,10 @@ actuation_data = np.array([[18, -20, 4],
                            [20, -3, 0.],
                            [19, 14, 1.]])
 
+
+
+repeat_len  = actuation_data.shape[0]
+actuation_diff = actuation_data - np.repeat(actuation_tar, [repeat_len], axis=0)
 
 
 results_path = os.path.join('images/', path, 'results/')
@@ -147,7 +153,7 @@ img_tar = images[0]
 num_iterations = actuation_data.shape[0]
 iterations = [x for x in range(num_iterations)]
  
-plot_actuation(iterations, actuation_data, results_path)
+plot_actuation(iterations, actuation_diff, results_path)
 
 plot_superimposition(img_fin, img_tar, results_path)
 
