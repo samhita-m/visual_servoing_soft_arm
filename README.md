@@ -10,5 +10,5 @@ The repository consists of 2 folders:
   
 ## Dataset
 
-You can run this code on your own image dataset with custom lables by giving the appropriate path to the dataset. 
+You can run this code on custom image datasets along with custom lables by giving the appropriate path to the dataset. 
 
