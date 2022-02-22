@@ -4,5 +4,5 @@ This repository contains the official code for the paper "Visual Servoing for Po
 
 The repository consists of 2 folders:
   1. Model - This folder contains code for predicting the absolute actuation values of the soft arm given image input.
-  2. Utils image - This folder contains code for plotting the histogram and finding out the positional and rotational error between the predicted and true actuations. 
+  2. Utils - This folder contains code for plotting the histogram and finding out the positional and rotational error between the predicted and true actuations. 
   
