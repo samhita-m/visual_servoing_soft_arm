@@ -31,7 +31,7 @@ def delq(q1, q2):
 
 
 
-
+#quaternion to euler angle conversion
 def quat2euler(qw, qx, qy, qz):
     
      
