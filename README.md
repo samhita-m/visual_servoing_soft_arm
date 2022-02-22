@@ -1,8 +1,8 @@
 # visual_servoing_soft_arm
 
-This is the repository for the visual servoing for soft arm project.
+This is the repository for the paper "Visual Servoing for Pose Control of Soft Continuum Arm in a Structured Environment".
 
-The model folder contains 3 subfolders:
-  1. Absolute - This folder contains code for predicting the absolute actuations of the soft arm.
-  2. Reference image - This folder contains code for the reference image method. 
-  3. Pairs of image - This folder contains code for the pairs of image method. 
+The repository consists of 2 folders:
+  1. Model - This folder contains code for predicting the absolute actuation values of the soft arm given image input.
+  2. Utils image - This folder contains code for plotting the histogram and finding out the positional and rotational error between the predicted and true actuations. 
+  
