@@ -10,5 +10,5 @@ The repository consists of 2 folders:
   
 ## Dataset
 
-You can run this code on custom image datasets along with custom lables by giving the appropriate path to the dataset. 
+We have made our dataset public [here](https://drive.google.com/file/d/121ZzOWs3c4gCqiINsLfIq2uHowDo1RB7/view?usp=sharing). You can also run this code on your custom data collected. 
 
