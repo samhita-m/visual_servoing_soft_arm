@@ -1,6 +1,6 @@
 # Visual Servoing for Pose Control of Soft Continuum Arm in a Structured Environment
 
-This repository contains the official code for the paper "Visual Servoing for Pose Control of Soft Continuum Arm in a Structured Environment", accepted for publication at RA-L + RoboSoft 2022.
+This repository contains the official code for the paper ["Visual Servoing for Pose Control of Soft Continuum Arm in a Structured Environment"](https://ieeexplore.ieee.org/document/9726901), accepted for publication at RA-L + RoboSoft 2022.
 
 ## Usage
 
